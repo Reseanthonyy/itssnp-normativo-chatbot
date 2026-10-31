@@ -137,6 +137,18 @@ Procesa archivos de audio multipart con Azure AI Speech para transcripción en e
 
 ---
 
+## 📸 Galería de la Aplicación en Vivo
+
+| 🏛️ Portal y Chatbot con Citas RAG | 📊 Panel de Telemetría y Satisfacción |
+|:---:|:---:|
+| ![Portal y Chatbot](screenshots/01-chatbot-portal.png) | ![Panel Admin](screenshots/02-dashboard-admin.png) |
+
+| 📜 Documentación OpenAPI / Scalar | ☁️ Recursos en Azure (Azure for Students) |
+|:---:|:---:|
+| ![Documentación Scalar](screenshots/03-api-scalar.png) | ![Azure Portal](screenshots/04-azure-portal.png) |
+
+---
+
 ## ☁️ Despliegue en Azure App Service
 
 ```powershell

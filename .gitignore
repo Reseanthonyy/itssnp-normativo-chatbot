@@ -27,12 +27,6 @@ publish-dotnet/
 .agent/
 .gemini/
 
-## Capturas y entregables locales (solicitado no subir a GitHub público)
-screenshots/
-*.png
-*.jpg
-*.jpeg
-
 ## Configuration / Local Environment Secrets
 appsettings.Development.json
 appsettings.Local.json
