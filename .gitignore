@@ -1,0 +1,40 @@
+## ====================================================================
+## Visual Studio / .NET Core / C#
+## ====================================================================
+bin/
+obj/
+publish/
+publish-dotnet/
+*.zip
+*.tar.gz
+
+## Visual Studio & VS Code cache
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Local databases and logs
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.sqlite
+
+## Agent / IDE AI configuration
+.agent/
+.gemini/
+
+## Capturas y entregables locales (solicitado no subir a GitHub público)
+screenshots/
+*.png
+*.jpg
+*.jpeg
+
+## Configuration / Local Environment Secrets
+appsettings.Development.json
+appsettings.Local.json
+.env
+secrets.json

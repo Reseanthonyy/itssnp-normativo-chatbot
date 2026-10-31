@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1B396A">
+    <title>ITSSNP | Panel de Auditoría y Calidad del Asistente</title>
+    <link rel="icon" type="image/webp" href="/logo_itssnp.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=5">
+    <style>
+      .admin-body {
+        background-color: #F8FAFC;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .admin-nav {
+        background-color: #1B396A;
+        color: #FFFFFF;
+        padding: 12px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .admin-nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .admin-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: #FFFFFF;
+      }
+      .admin-brand img {
+        height: 38px;
+      }
+      .admin-brand-title {
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+      .admin-brand-sub {
+        font-size: 0.75rem;
+        color: #94A3B8;
+        display: block;
+      }
+      .btn-back-portal {
+        background-color: rgba(255,255,255,0.15);
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: background-color 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .btn-back-portal:hover {
+        background-color: rgba(255,255,255,0.25);
+      }
+      .admin-container {
+        max-width: 1200px;
+        margin: 25px auto;
+        padding: 0 20px;
+        flex: 1;
+      }
+      /* Login Gate */
+      .gate-card {
+        max-width: 440px;
+        margin: 60px auto;
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06);
+        text-align: center;
+      }
+      .gate-logo {
+        height: 55px;
+        margin-bottom: 15px;
+      }
+      .gate-title {
+        color: #1B396A;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .gate-desc {
+        font-size: 0.85rem;
+        color: #64748B;
+        margin-bottom: 20px;
+      }
+      .gate-input {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #CBD5E1;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        text-align: center;
+        letter-spacing: 0.1em;
+      }
+      .gate-btn {
+        width: 100%;
+        background-color: #1B396A;
+        color: #FFFFFF;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      .gate-btn:hover {
+        background-color: #0F2240;
+      }
+      .gate-hint {
+        margin-top: 15px;
+        font-size: 0.75rem;
+        color: #059669;
+        background-color: #ECFDF5;
+        border: 1px dashed #A7F3D0;
+        padding: 8px;
+        border-radius: 6px;
+      }
+      /* Dashboard */
+      .dash-header {
+        margin-bottom: 25px;
+      }
+      .dash-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #1B396A;
+      }
+      .dash-sub {
+        font-size: 0.9rem;
+        color: #64748B;
+      }
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-bottom: 30px;
+      }
+      .kpi-card {
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        display: flex;
+        flex-direction: column;
+      }
+      .kpi-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #64748B;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
+      }
+      .kpi-val {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #1B396A;
+        line-height: 1;
+      }
+      .kpi-sub {
+        font-size: 0.75rem;
+        color: #059669;
+        font-weight: 600;
+        margin-top: 6px;
+      }
+      .kpi-sub.warning {
+        color: #D97706;
+      }
+      /* Tabs */
+      .admin-tabs {
+        display: flex;
+        gap: 8px;
+        border-bottom: 2px solid #E2E8F0;
+        margin-bottom: 20px;
+      }
+      .tab-btn {
+        background: none;
+        border: none;
+        padding: 10px 18px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #64748B;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        transition: all 0.2s;
+      }
+      .tab-btn.active {
+        color: #1B396A;
+        border-bottom-color: #1B396A;
+      }
+      .tab-pane {
+        display: none;
+      }
+      .tab-pane.active {
+        display: block;
+      }
+      /* Tables */
+      .table-card {
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      }
+      .table-toolbar {
+        padding: 14px 18px;
+        background: #F8FAFC;
+        border-bottom: 1px solid #E2E8F0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .btn-refresh {
+        background-color: #1B396A;
+        color: #FFFFFF;
+        border: none;
+        padding: 7px 14px;
+        border-radius: 6px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .btn-refresh:hover {
+        background-color: #0F2240;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+      }
+      .data-table th {
+        background-color: #F1F5F9;
+        color: #334155;
+        font-weight: 700;
+        text-align: left;
+        padding: 12px 16px;
+        border-bottom: 1px solid #CBD5E1;
+      }
+      .data-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #E2E8F0;
+        color: #1E293B;
+      }
+      .data-table tr:hover {
+        background-color: #F8FAFC;
+      }
+      .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .filter-select {
+        padding: 5px 10px;
+        border-radius: 6px;
+        border: 1px solid #CBD5E1;
+        font-size: 0.82rem;
+      }
+    </style>
+  </head>
+  <body class="admin-body">
+    <!-- Navbar Institucional -->
+    <header class="admin-nav">
+      <div class="container admin-nav-inner">
+        <a href="/" class="admin-brand">
+          <img src="/logo_itssnp.webp" alt="Logotipo ITSSNP">
+          <div>
+            <span class="admin-brand-title">ITSSNP · Monitoreo y Auditoría</span>
+            <span class="admin-brand-sub">Gobernanza y Satisfacción del Asistente Normativo</span>
+          </div>
+        </a>
+        <a href="/" class="btn-back-portal">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span>Volver al Portal Estudiantil</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="admin-container">
+      <!-- Acceso de Seguridad (Gatekeeper) -->
+      <section id="admin-gate" class="gate-card">
+        <img src="/logo_itssnp.webp" alt="Escudo ITSSNP" class="gate-logo">
+        <h2 class="gate-title">Acceso a Monitoreo y Auditoría</h2>
+        <p class="gate-desc">Ingresa el PIN institucional para consultar las métricas de satisfacción y el registro de consultas.</p>
+        <form id="gate-form">
+          <input type="password" id="gate-pin" class="gate-input" placeholder="Ingresa PIN (ej. 2026)" autofocus required>
+          <button type="submit" class="gate-btn">Ingresar al Módulo</button>
+        </form>
+        <div class="gate-hint">
+          <strong>Credencial Institucional:</strong><br>
+          Clave de personal administrativo: <code>2026</code>
+        </div>
+      </section>
+
+      <!-- Panel de Control Principal (Oculto hasta validar PIN) -->
+      <section id="admin-dashboard" hidden>
+        <div class="dash-header">
+          <h1 class="dash-title">Telemetría y Calidad de Respuestas</h1>
+          <p class="dash-sub">Base de datos de auditoría conectada con el Asistente Normativo ITSSNP (.NET 10 & Azure AI Foundry).</p>
+        </div>
+
+        <!-- Indicadores Rápidos (KPIs) -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <span class="kpi-label">Consultas Totales</span>
+            <span class="kpi-val" id="kpi-queries">--</span>
+            <span class="kpi-sub">Telemetría RAG en Base de Datos</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Consultas Calificadas</span>
+            <span class="kpi-val" id="kpi-rated">--</span>
+            <span class="kpi-sub">Opiniones de estudiantes registradas</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Índice de Satisfacción</span>
+            <span class="kpi-val" id="kpi-satisfaction">--%</span>
+            <span class="kpi-sub">Porcentaje de calificaciones positivas</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Opiniones (👍 / 👎)</span>
+            <span class="kpi-val" id="kpi-opinions" style="font-size: 1.5rem;">--</span>
+            <span class="kpi-sub">Útiles vs No resueltas</span>
+          </div>
+        </div>
+
+        <!-- Pestañas de Navegación -->
+        <div class="admin-tabs">
+          <button type="button" class="tab-btn active" data-tab="tab-queries">Bitácora de Consultas y Auditoría</button>
+          <button type="button" class="tab-btn" data-tab="tab-architecture">Arquitectura del Sistema</button>
+        </div>
+
+        <!-- Pestaña 1: Auditoría y Consultas -->
+        <div id="tab-queries" class="tab-pane active">
+          <div class="table-card">
+            <div class="table-toolbar">
+              <div class="filter-group">
+                <label style="font-weight:600; font-size:0.85rem; color:#475569;">Filtrar por Opinión:</label>
+                <select id="filter-rating" class="filter-select">
+                  <option value="">Todas las consultas</option>
+                  <option value="1">👍 Solo calificaciones positivas (Útiles)</option>
+                  <option value="-1">👎 Solo calificaciones negativas (No resolvió)</option>
+                </select>
+              </div>
+              <button type="button" id="btn-refresh-queries" class="btn-refresh">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+                <span>Actualizar Bitácora</span>
+              </button>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Fecha y Hora</th>
+                    <th>Pregunta del Alumno</th>
+                    <th>Tema Detectado</th>
+                    <th>Fuentes Oficiales Citadas (RAG)</th>
+                    <th>Opinión (Feedback)</th>
+                  </tr>
+                </thead>
+                <tbody id="queries-table-body">
+                  <tr><td colspan="5" style="text-align:center; color:#94A3B8;">Cargando bitácora de auditoría...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pestaña 2: Arquitectura Técnica -->
+        <div id="tab-architecture" class="tab-pane">
+          <div class="table-card" style="padding: 24px;">
+            <h3 style="color:#1B396A; margin-bottom:12px;">Componentes Integrados en la Solución Enterprise</h3>
+            <p style="font-size:0.9rem; color:#475569; margin-bottom:16px;">
+              Este sistema implementa una arquitectura cloud con servicios de <strong>Microsoft Azure</strong> alineados a los principios éticos de Inteligencia Artificial Responsable:
+            </p>
+            <ul style="font-size:0.88rem; color:#334155; line-height: 1.8; margin-left: 20px;">
+              <li><strong>Motor Backend:</strong> ASP.NET Core (.NET 10 Minimal APIs) en servidor Kestrel ultra-optimizado (~35 MB RAM).</li>
+              <li><strong>Inteligencia Artificial:</strong> Microsoft AI Foundry Agent con RAG vectorial sobre 5 reglamentos oficiales de la institución. Respuestas concisas y directas.</li>
+              <li><strong>Servicios de Voz (Inclusión):</strong> Azure AI Speech (Speech-to-Text) y Web Speech API nativa para interacción por micrófono (🎙️) sin teclear.</li>
+              <li><strong>Persistencia y Gobernanza (Rendición de Cuentas):</strong> Base de datos relacional híbrida (PostgreSQL Flexible Server PaaS / SQLite) para registro de auditoría y métricas de satisfacción estudiantil (👍/👎).</li>
+              <li><strong>Seguridad Zero-Secrets:</strong> Autenticación RBAC mediante Microsoft Entra ID y Managed Identity.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/admin.js?v=5"></script>
+  </body>
+</html>

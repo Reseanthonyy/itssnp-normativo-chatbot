@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Instituto Tecnológico Superior de la Sierra Norte de Puebla (ITSSNP - TecNM Campus Zacatlán). Educación superior tecnológica, oferta educativa, normatividad y servicios estudiantiles.">
+    <meta name="theme-color" content="#1B396A">
+    <title>ITSSNP | Instituto Tecnológico Superior de la Sierra Norte de Puebla</title>
+    <link rel="icon" type="image/webp" href="/logo_itssnp.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=5">
+    <script src="/app.js?v=5" defer></script>
+  </head>
+  <body>
+    <!-- Barra Superior de Gobierno / SEP / TecNM -->
+    <header class="topbar-gov">
+      <div class="container topbar-gov-inner">
+        <div class="gov-entity">
+          <span class="gov-bold">GOBIERNO DE MÉXICO</span>
+          <span class="gov-slash">|</span>
+          <span>SECRETARÍA DE EDUCACIÓN PÚBLICA</span>
+        </div>
+        <div class="gov-tech">
+          <span>TECNOLÓGICO NACIONAL DE MÉXICO</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navegación Principal Institucional -->
+    <nav class="main-navbar">
+      <div class="container navbar-inner">
+        <a href="/" class="brand-unit" aria-label="Inicio ITSSNP">
+          <img src="/logo_itssnp.webp" alt="Logotipo Oficial ITSSNP" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-title">ITSSNP</span>
+            <span class="brand-subtitle">TecNM Campus Zacatlán</span>
+          </div>
+        </a>
+
+        <div class="nav-menu">
+          <a href="#inicio" class="nav-item active">Inicio</a>
+          <a href="#oferta" class="nav-item">Oferta Educativa</a>
+          <a href="#normatividad" class="nav-item">Normatividad</a>
+          <a href="#servicios" class="nav-item">Servicios Escolares</a>
+          <a href="#contacto" class="nav-item">Contacto</a>
+          <a href="/admin.html" class="nav-item nav-admin-link" title="Módulo de Monitoreo y Calidad">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -2px; margin-right: 4px;"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            <span>Monitoreo (Admin)</span>
+          </a>
+          <button type="button" class="btn-assistant-nav" id="btn-open-assistant-nav">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span>Asistente Virtual</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section Institucional con Portada Real del Campus -->
+    <header class="hero-home" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-badge">TecNM · Campus Zacatlán · Clave 21EIT0004P</div>
+          <h1 class="hero-heading">Instituto Tecnológico Superior de la Sierra Norte de Puebla</h1>
+          <p class="hero-motto">«Creatividad y Tecnología para la Excelencia de México»</p>
+          <p class="hero-summary">
+            Formamos profesionales e investigadores de excelencia en ingeniería y administración para impulsar el desarrollo regional y nacional, con programas acreditados y vinculación activa.
+          </p>
+          <div class="hero-actions">
+            <a href="#normatividad" class="btn-primary">Normatividad Oficial</a>
+            <a href="#oferta" class="btn-secondary" style="color: #1B396A; background: #FFFFFF; border: 1px solid #CBD5E1; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: 8px; font-weight: 600;">Conoce la Oferta Educativa</a>
+          </div>
+        </div>
+
+        <div class="hero-media-col">
+          <div class="hero-frame">
+            <img src="/hero_itssnp.webp" alt="Instalaciones del Campus Central ITSSNP en Zacatlán, Puebla" class="hero-cover-img">
+            <div class="hero-frame-caption">
+              <span class="caption-dot"></span>
+              <span>Campus Central · Zacatlán, Puebla</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Oferta Educativa Real -->
+    <section class="section-programs" id="oferta">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2>Oferta Educativa</h2>
+          <p>Planes de estudio de vanguardia acreditados por competencias profesionales.</p>
+        </div>
+
+        <div class="programs-grid">
+          <article class="program-card">
+            <div class="program-code">INGENIERÍA</div>
+            <h3>Informática</h3>
+            <p>Desarrollo de software, arquitecturas cloud, inteligencia artificial, bases de datos y ciberseguridad.</p>
+          </article>
+
+          <article class="program-card">
+            <div class="program-code">INGENIERÍA</div>
+            <h3>Industrial</h3>
+            <p>Optimización de procesos de manufactura, calidad total, logística de cadenas de suministro y gestión operativa.</p>
+          </article>
+
+          <article class="program-card">
+            <div class="program-code">INGENIERÍA</div>
+            <h3>Electromecánica</h3>
+            <p>Sistemas mecánicos, eléctricos, automatización industrial, control y mantenimiento electromecánico.</p>
+          </article>
+
+          <article class="program-card">
+            <div class="program-code">LICENCIATURA</div>
+            <h3>Gastronomía</h3>
+            <p>Técnicas culinarias internacionales y mexicanas, administración de alimentos y bebidas, nutrición y gestión de negocios.</p>
+          </article>
+
+          <article class="program-card">
+            <div class="program-code">LICENCIATURA</div>
+            <h3>Contador Público</h3>
+            <p>Auditoría contable, finanzas corporativas, planeación fiscal y toma de decisiones estratégicas empresariales.</p>
+          </article>
+
+          <article class="program-card">
+            <div class="program-code">INGENIERÍA</div>
+            <h3>Innovación Agrícola Sustentable</h3>
+            <p>Biotecnología agropecuaria, agricultura de precisión y producción sustentable en la región de la Sierra Norte.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentos Normativos Oficiales (Fuentes de Conocimiento) -->
+    <section class="section-normative" id="normatividad">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2>Normatividad y Documentos Oficiales</h2>
+          <p>Disposiciones, calendarios y lineamientos vigentes que rigen la vida estudiantil y académica del ITSSNP.</p>
+        </div>
+
+        <div class="normative-grid">
+          <article class="normative-card">
+            <div class="normative-badge">REGLAMENTO VIGENTE</div>
+            <h3>Reglamento de Estudiantes</h3>
+            <p>Establece los derechos, obligaciones, requisitos de permanencia, régimen de evaluación y procedimientos de bajas de los alumnos del ITSSNP.</p>
+          </article>
+
+          <article class="normative-card">
+            <div class="normative-badge">CICLO ESCOLAR</div>
+            <h3>Calendario Escolar 2026-2027</h3>
+            <p>Cronograma oficial de actividades: periodos de reinscripciones, inicio y fin de cursos, semanas de evaluación y días inhábiles.</p>
+          </article>
+
+          <article class="normative-card">
+            <div class="normative-badge">LINEAMIENTO TECNM</div>
+            <h3>Lineamientos de Servicio Social</h3>
+            <p>Regula la acreditación de los 10 créditos (500 horas), formatos oficiales de reporte bimestral, requisitos previos y trámite de liberación.</p>
+          </article>
+
+          <article class="normative-card">
+            <div class="normative-badge">PROTOCOLO DE SALUD</div>
+            <h3>Procedimiento ante Accidente Escolar</h3>
+            <p>Instrucciones precisas para la activación del seguro contra accidentes escolares dentro de las instalaciones o en el trayecto directo.</p>
+          </article>
+
+          <article class="normative-card">
+            <div class="normative-badge">ARANCELES Y COSTOS</div>
+            <h3>Catálogo de Servicios 2026</h3>
+            <p>Tabulador oficial de trámites escolares: constancias con calificaciones, duplicado de credencial estudiantil y certificaciones.</p>
+          </article>
+
+          <article class="normative-card">
+            <div class="normative-badge">DISPOSICIONES GENERALES</div>
+            <h3>Lineamientos Académicos TecNM</h3>
+            <p>Marco normativo aplicable para planes por competencias, convalidaciones y equivalencias en el Sistema Tecnológico Nacional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Servicios Escolares y Ventanillas -->
+    <section class="section-offices" id="servicios">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2>Servicios Escolares y Ventanillas</h2>
+          <p>Módulos de atención presencial en el campus central de Zacatlán.</p>
+        </div>
+
+        <div class="offices-grid">
+          <div class="office-box">
+            <h4>Departamento de Servicios Escolares</h4>
+            <p>Inscripciones, reinscripciones, emisión de certificados oficiales, constancias de estudio y legalizaciones.</p>
+            <span class="office-location">Edificio Central · Planta Baja</span>
+          </div>
+
+          <div class="office-box">
+            <h4>Gestión Tecnológica y Vinculación</h4>
+            <p>Asignación y liberación de Servicio Social, Residencias Profesionales, bolsa de trabajo y convenios institucionales.</p>
+            <span class="office-location">Edificio C · Módulo de Vinculación</span>
+          </div>
+
+          <div class="office-box">
+            <h4>Servicio Médico y Seguridad</h4>
+            <p>Primeros auxilios, canalización médica institucional y reporte de seguro contra accidentes escolares.</p>
+            <span class="office-location">Edificio de Servicios Estudiantiles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de Página Institucional -->
+    <footer class="footer-site" id="contacto">
+      <div class="container footer-site-inner">
+        <div class="footer-info">
+          <div class="footer-brand-wrap">
+            <img src="/logo_itssnp.webp" alt="Logo ITSSNP" class="footer-logo-img">
+            <div>
+              <strong>Instituto Tecnológico Superior de la Sierra Norte de Puebla</strong>
+              <p>Organismo Público Descentralizado del Estado de Puebla · TecNM Campus Zacatlán</p>
+            </div>
+          </div>
+          <p class="footer-dir">
+            Carretera Zacatlán - Jicolapa Km 1.5, Jicolapa, C.P. 73310, Zacatlán, Puebla.<br>
+            Teléfono: 797 975 1694 · Correo: contacto@itssnp.edu.mx
+          </p>
+        </div>
+
+        <div class="footer-tech">
+          <span class="tech-title">Plataforma Cloud & IA</span>
+          <p>Sistema institucional operado con Microsoft AI Foundry, Azure App Service, Base de Datos y RAG nativo fundamentado en los reglamentos oficiales.</p>
+          <p style="margin-top: 8px;"><a href="/admin.html" style="color: #93C5FD; text-decoration: underline; font-size: 0.8rem;">Portal de Monitoreo y Auditoría RAG (Personal Administrativo)</a></p>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container footer-copy-inner">
+          <span>© 2026 Instituto Tecnológico Superior de la Sierra Norte de Puebla · Todos los derechos reservados</span>
+          <span>Tecnológico Nacional de México</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- WIDGET FLOTANTE: BURBUJA Y CHATBOT ASISTENTE -->
+    <!-- ========================================== -->
+
+    <!-- Botón / Burbuja Flotante en la esquina inferior derecha -->
+    <div class="floating-widget-wrapper">
+      <button type="button" class="floating-chat-bubble" id="btn-toggle-chat" aria-label="Abrir Asistente Normativo del ITSSNP">
+        <div class="bubble-icon-wrap" aria-hidden="true">
+          <!-- Icono de chat institucional -->
+          <svg class="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <!-- Icono de cerrar (cuando el chat está abierto) -->
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </div>
+        <span class="bubble-ping" aria-hidden="true"></span>
+      </button>
+
+      <!-- Mensaje Teaser flotante -->
+      <div class="bubble-teaser" id="bubble-teaser">
+        <span>¿Dudas sobre reglamentos? Consulta aquí</span>
+      </div>
+
+      <!-- Ventana Flotante del Chatbot -->
+      <section class="chat-popup" id="chat-popup" role="dialog" aria-label="Asistente Normativo ITSSNP" hidden>
+        <!-- Encabezado del Chatbot -->
+        <header class="popup-header">
+          <div class="popup-header-brand">
+            <img src="/logo_itssnp.webp" alt="Escudo ITSSNP" class="popup-avatar-img">
+            <div class="popup-titles">
+              <h3>Asistente Normativo ITSSNP</h3>
+              <div class="popup-status">
+                <span class="status-green-dot"></span>
+                <span>En línea · Microsoft Foundry</span>
+              </div>
+            </div>
+          </div>
+          <div class="popup-header-controls">
+            <button type="button" id="btn-clear-chat" class="btn-ctrl" title="Reiniciar conversación">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+            </button>
+            <button type="button" id="btn-close-popup" class="btn-ctrl" title="Minimizar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+        </header>
+
+        <!-- Presets / Preguntas Sugeridas con Controles Horizontales -->
+        <div class="popup-presets" id="popup-presets">
+          <div class="presets-header-bar">
+            <span class="presets-label">Preguntas frecuentes sugeridas</span>
+            <span class="presets-hint" title="Arrastra horizontalmente o utiliza las flechas para explorar">Desliza ↔</span>
+          </div>
+          <div class="presets-carousel-wrapper">
+            <button type="button" class="preset-arrow prev" id="preset-scroll-left" aria-label="Ver preguntas anteriores" title="Desplazar a la izquierda" disabled>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="presets-scroll" id="presets-scroll" role="region" aria-label="Preguntas sugeridas">
+              <button type="button" class="preset-chip" data-question="¿Cuáles son los requisitos y créditos necesarios para el Servicio Social?">
+                Servicio Social (Requisitos)
+              </button>
+              <button type="button" class="preset-chip" data-question="¿Cuál es el protocolo que se debe seguir en caso de sufrir un accidente escolar?">
+                Accidente Escolar (Seguro)
+              </button>
+              <button type="button" class="preset-chip" data-question="¿Cuáles son las fechas de reinscripciones del Calendario Escolar 2026-2027?">
+                Calendario Escolar 2026-2027
+              </button>
+              <button type="button" class="preset-chip" data-question="¿Cuáles son los derechos y causales de baja según el Reglamento de Estudiantes?">
+                Derechos y Bajas
+              </button>
+              <button type="button" class="preset-chip" data-question="¿Qué trámites incluye el Catálogo de Servicios y cuál es el costo de constancias?">
+                Costos y Trámites
+              </button>
+            </div>
+            <button type="button" class="preset-arrow next" id="preset-scroll-right" aria-label="Ver más preguntas sugeridas" title="Desplazar a la derecha">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Área de Conversación -->
+        <div class="popup-messages" id="popup-messages" aria-live="polite">
+          <div class="popup-welcome" id="popup-welcome">
+            <p><strong>¡Hola!</strong> Soy el Asistente Oficial del ITSSNP. Pregúntame sobre reglamentos, fechas escolares, servicio social o accidentes. Te responderé con fundamento en los documentos oficiales.</p>
+          </div>
+
+          <div id="messages-list" class="messages-list"></div>
+
+          <!-- Indicador de Consulta (Oculto estrictamente por defecto) -->
+          <div class="popup-typing" id="popup-typing" role="status" hidden>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="typing-label">Consultando reglamentos oficiales…</span>
+          </div>
+        </div>
+
+        <!-- Barra de Entrada del Chatbot -->
+        <footer class="popup-footer">
+          <form id="chat-form" class="popup-form">
+            <div class="popup-input-row">
+              <textarea
+                id="message-input"
+                rows="1"
+                maxlength="2000"
+                placeholder="Escribe tu consulta normativa… (Enter para enviar)"
+                autocomplete="off"
+                required
+              ></textarea>
+              <button type="button" id="btn-mic" class="btn-popup-mic" aria-label="Hablar por micrófono con Azure AI Speech" title="Hablar por micrófono">
+                <svg class="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="23"></line>
+                  <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+              </button>
+              <button type="submit" id="send-button" class="btn-popup-send" aria-label="Enviar mensaje">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </div>
+            <div class="popup-disclaimer">
+              <span>Orientación oficial basada en los 5 reglamentos del ITSSNP.</span>
+            </div>
+            <p class="popup-error" id="form-error" role="alert" hidden></p>
+          </form>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
